@@ -1,15 +1,14 @@
 package com.project.baedang.domain.user;
 
-import com.project.baedang.domain.common.BaseEntity;
 import com.project.baedang.domain.finance.Stock;
 import jakarta.persistence.*;
 import lombok.Getter;
 
 @Entity
 @Getter
-public class Portfolio extends BaseEntity {
+public class PortfolioDetail {
 
-    // 포트폴리오 요약본 (포트폴리오ID, 유저ID, 현재자산, 예수금, 총평가손익, 당일실현손익, 총매입금액, 담보비율, 총평가금액, 전체배당금, 이익실현배당금)
+    // 포트폴리오 상세 테이블 별도 필요 (포트폴리오상세ID, 유저ID, 주식ID, 평가손익, 매도가능, 손익률, 평균단가, 매입금, 보유잔고, 평가금, 현재가, 매수수수료, 매도제비용, 배당예상금액, 현재배당률, 배당날짜, 배당타입)
     @Id
     @GeneratedValue
     @Column(name = "portfolio_id")
