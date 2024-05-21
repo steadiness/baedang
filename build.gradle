@@ -31,6 +31,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+	// H2 Database for local database usage
+	runtimeOnly 'com.h2database:h2'
+
 	//test 롬복 사용
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
@@ -40,6 +43,12 @@ dependencies {
 	annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jakarta"
 	annotationProcessor "jakarta.annotation:jakarta.annotation-api"
 	annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+
+	// Spring Boot Starter Batch for batch processing
+	implementation 'org.springframework.boot:spring-boot-starter-batch'
+
+	// Jsoup for HTML parsing
+	implementation 'org.jsoup:jsoup:1.15.3'
 }
 
 tasks.named('test') {
